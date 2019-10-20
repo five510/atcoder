@@ -96,3 +96,20 @@ def gcd(num1: int, num2: int) -> int:
     else:
         return gcd(num2,num1%num2)
 ```
+
+## 二部探索の処理
+```py
+import bisect
+Ln = [1,3,5,7,9] 
+idx = bisect.bisect_right(Ln,6)
+```
+
+## listの生成処理は結構遅い
+
+O(N^2)でlist生成するとかなり遅い。
+```py
+count = 0
+for a in range(N):
+    for b in range(a+1, N):
+        c_list = Ln[0:N-b-1]
+```
